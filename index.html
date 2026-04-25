@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5G9K7PFB');</script>
-<!-- End Google Tag Manager -->
-    
     <meta charset="UTF-8">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5G9K7PFB');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIU'S JUMP SHOP</title>
+    <title>MIU'S MANGA REVIEW</title>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             font-family: 'Noto Sans JP', sans-serif;
-            background-color: #000; /* 背景は黒 */
+            background-color: #000;
             color: #fff;
             overflow-x: hidden;
         }
-        /* 集中線のような背景演出 */
         body::before {
             content: "";
             position: fixed;
@@ -31,126 +27,115 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             z-index: -1;
         }
         header {
-            background-color: #ed1c24; /* ジャンプ公式っぽい赤 */
-            padding: 30px;
+            background-color: #ed1c24;
+            padding: 40px 20px;
             text-align: center;
-            transform: skewY(-3deg); /* 斜めにして躍動感を出す */
+            transform: skewY(-2deg);
             margin-top: -10px;
-            box-shadow: 0 5px 0 #9e0b0f;
+            box-shadow: 0 8px 0 #9e0b0f;
         }
         .logo {
-            font-size: 40px;
+            font-size: 48px;
             font-weight: 900;
             color: #fff;
-            text-transform: uppercase;
-            letter-spacing: -2px;
             text-shadow: 4px 4px 0 #000;
-            transform: skewY(3deg);
+            transform: skewY(2deg);
         }
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
-        .item-card {
+        .review-card {
             background: #fff;
-            width: 250px;
-            margin: 20px;
-            padding: 10px;
-            border: 5px solid #000;
-            transform: rotate(-1deg); /* 少し傾ける */
-            transition: 0.2s;
-        }
-        .item-card:hover {
-            transform: scale(1.1) rotate(1deg);
-            z-index: 10;
-        }
-        .item-image {
-            width: 100%;
-            height: 180px;
-            background-color: #eee;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 80px;
-            border-bottom: 5px solid #000;
-        }
-        .item-info {
+            width: 320px;
+            margin: 25px;
             padding: 15px;
+            border: 6px solid #000;
             color: #000;
+            transform: rotate(-1.5deg);
+            transition: 0.3s;
         }
-        .item-name {
-            font-size: 20px;
-            font-weight: 900;
-            margin-bottom: 5px;
-            border-left: 8px solid #ed1c24;
-            padding-left: 10px;
+        .review-card:nth-child(even) {
+            transform: rotate(1.5deg);
         }
-        .price {
+        .review-card:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+            box-shadow: 15px 15px 0 #ed1c24;
+        }
+        .work-title {
             font-size: 24px;
-            color: #ed1c24;
             font-weight: 900;
-            font-style: italic;
+            border-bottom: 4px solid #ed1c24;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
         }
-        .buy-btn {
+        .review-text {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-weight: bold;
+            min-height: 100px;
+        }
+        .status-tag {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 2px 10px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .btn-link {
             display: block;
-            margin-top: 15px;
-            padding: 12px;
-            background-color: #000;
+            background: #ed1c24;
             color: #fff;
             text-align: center;
             text-decoration: none;
+            padding: 12px;
             font-weight: 900;
-            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); /* 台形ボタン */
-        }
-        .buy-btn:hover {
-            background-color: #ed1c24;
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
         }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G9K7PFB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G9K7PFB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<header>
-    <div class="logo">Miu's Hero Archives</div>
-</header>
+    <header>
+        <div class="logo">Miu's Manga Soul</div>
+    </header>
 
-<div class="container">
-    <div class="item-card">
-        <div class="item-image">🔥</div>
-        <div class="item-info">
-            <div class="item-name">灼熱の拳</div>
-            <div class="price">MAX POWER</div>
-            <a href="#" class="buy-btn">入手する</a>
-        </div>
+    <div class="container">
+        <article class="review-card">
+            <div class="status-tag">激推し中</div>
+            <div class="work-title">カグラバチ</div>
+            <div class="review-text">
+                【ここに熱い想いを書く！】<br>
+                刀の描き込みが凄すぎて鳥肌が立つ。復讐に燃えるチヒロがとにかく格好いい！
+            </div>
+            <a href="https://kagurabachi.jp/" target="_blank" class="btn-link">公式サイトへ</a>
+        </article>
+
+        <article class="review-card">
+            <div class="status-tag">絶対王者</div>
+            <div class="work-title">ONE PIECE</div>
+            <div class="review-text">
+                【ここに熱い想いを書く！】<br>
+                最終章に入ってからの怒涛の展開。毎週ジャンプをめくる手が震える！
+            </div>
+            <a href="https://one-piece.com/index.html" target="_blank" class="btn-link">公式サイトへ</a>
+        </article>
     </div>
 
-    <div class="item-card">
-        <div class="item-image">⚡</div>
-        <div class="item-info">
-            <div class="item-name">迅雷の剣</div>
-            <div class="price">SPEED STAR</div>
-            <a href="#" class="buy-btn">入手する</a>
-        </div>
+    <div style="text-align: center; padding-bottom: 50px;">
+        <p style="font-weight: 900;">おすすめ漫画を教えてくれ！</p>
+        <a href="YOUR_GOOGLE_FORM_URL" style="color: #ed1c24; font-weight: 900;">参戦フォームはこちら</a>
     </div>
-
-    <div class="item-card" style="border-color: #ed1c24; transform: rotate(2deg);">
-        <div class="item-image" style="background-color: #000; color: #ed1c24; overflow: hidden;">
-            <span style="font-size: 30px; letter-spacing: 5px;">カグラバチ</span>
-        </div>
-        <div class="item-info">
-            <div class="item-name">おすすめ漫画</div>
-            <p style="font-size: 12px; font-weight: bold; margin: 5px 0;">刀と復讐の最高傑作。今すぐ公式サイトへ飛べ！！</p>
-            <a href="https://kagurabachi.jp/" target="_blank" class="buy-btn" style="background-color: #ed1c24;">
-                公式サイトへ
-            </a>
-        </div>
-    </div>
-</div>
 
 </body>
 </html>
