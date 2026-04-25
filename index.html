@@ -3,56 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miu's Site</title>
+    <title>Miu's Kawaii Shop</title>
     <style>
-        /* ここにデザインの指示（CSS）を書いています */
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f0f2f5; /* 薄いグレーの背景 */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
+            font-family: 'Hiragino Maru Gothic ProN', sans-serif;
+            background-color: #e0f7fa; /* サンリオ風のパステルブルー */
+            color: #555;
         }
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        /* ヘッダー */
+        header {
+            background-color: #ffffff;
+            padding: 20px;
             text-align: center;
-            max-width: 400px;
+            border-bottom: 5px solid #ffc1e3; /* ピンクのライン */
         }
-        h1 {
-            color: #333;
-            margin-bottom: 1rem;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff85c0;
         }
-        p {
-            color: #666;
-            line-height: 1.6;
+        /* 商品一覧のコンテナ */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
         }
-        .btn {
-            display: inline-block;
-            margin-top: 1.5rem;
-            padding: 10px 20px;
-            background-color: #007bff;
+        /* 商品カード */
+        .item-card {
+            background: white;
+            width: 200px;
+            margin: 15px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 2px solid #fff;
+            transition: transform 0.3s;
+        }
+        .item-card:hover {
+            transform: translateY(-5px);
+            border-color: #ffc1e3;
+        }
+        .item-image {
+            width: 100%;
+            height: 150px;
+            background-color: #fff9fb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+        .item-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .price {
+            color: #ff85c0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .buy-btn {
+            display: block;
+            margin-top: 10px;
+            padding: 8px;
+            background-color: #81d4fa;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #0056b3;
+            border-radius: 50px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>ようこそ！</h1>
-        <p>GitHub Pagesでサイトを制作中。<br>デザインを少し変えてみました！</p>
-        <a href="#" class="btn" onclick="alert('クリックされました！')">ボタンを試す</a>
+<header>
+    <div class="logo">♡ Miu's Kawaii Shop ♡</div>
+</header>
+
+<div class="container">
+    <div class="item-card">
+        <div class="item-image">🧸</div>
+        <div class="item-info">
+            <div>ふわふわぬいぐるみ</div>
+            <div class="price">¥1,200</div>
+            <a href="#" class="buy-btn">詳細をみる</a>
+        </div>
     </div>
+
+    <div class="item-card">
+        <div class="item-image">🎀</div>
+        <div class="item-info">
+            <div>キラキラリボン</div>
+            <div class="price">¥500</div>
+            <a href="#" class="buy-btn">詳細をみる</a>
+        </div>
+    </div>
+
+    <div class="item-card">
+        <div class="item-image">🌟</div>
+        <div class="item-info">
+            <div>星のステッカー</div>
+            <div class="price">¥300</div>
+            <a href="#" class="buy-btn">詳細をみる</a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
