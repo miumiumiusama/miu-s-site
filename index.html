@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<!-- Google Tag Manager -->
+    <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -11,76 +11,101 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miu's Kawaii Shop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap" rel="stylesheet">
+    <title>MIU'S JUMP SHOP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: 'Zen Maru Gothic', sans-serif;
-            background-color: #e0f7fa; /* サンリオ風のパステルブルー */
-            color: #555;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #000; /* 背景は黒 */
+            color: #fff;
+            overflow-x: hidden;
         }
-        /* ヘッダー */
+        /* 集中線のような背景演出 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle, transparent 20%, #000 80%),
+                        repeating-conic-gradient(from 0deg, #111 0deg 10deg, #000 10deg 20deg);
+            z-index: -1;
+        }
         header {
-            background-color: #ffffff;
-            padding: 20px;
+            background-color: #ed1c24; /* ジャンプ公式っぽい赤 */
+            padding: 30px;
             text-align: center;
-            border-bottom: 5px solid #ffc1e3; /* ピンクのライン */
+            transform: skewY(-3deg); /* 斜めにして躍動感を出す */
+            margin-top: -10px;
+            box-shadow: 0 5px 0 #9e0b0f;
         }
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #ff85c0;
+            font-size: 40px;
+            font-weight: 900;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            text-shadow: 4px 4px 0 #000;
+            transform: skewY(3deg);
         }
-        /* 商品一覧のコンテナ */
         .container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            padding: 20px;
+            padding: 50px 20px;
         }
-        /* 商品カード */
         .item-card {
-            background: white;
-            width: 200px;
-            margin: 15px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 2px solid #fff;
-            transition: transform 0.3s;
+            background: #fff;
+            width: 250px;
+            margin: 20px;
+            padding: 10px;
+            border: 5px solid #000;
+            transform: rotate(-1deg); /* 少し傾ける */
+            transition: 0.2s;
         }
         .item-card:hover {
-            transform: translateY(-5px);
-            border-color: #ffc1e3;
+            transform: scale(1.1) rotate(1deg);
+            z-index: 10;
         }
         .item-image {
             width: 100%;
-            height: 150px;
-            background-color: #fff9fb;
+            height: 180px;
+            background-color: #eee;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 40px;
+            font-size: 80px;
+            border-bottom: 5px solid #000;
         }
         .item-info {
             padding: 15px;
-            text-align: center;
+            color: #000;
+        }
+        .item-name {
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            border-left: 8px solid #ed1c24;
+            padding-left: 10px;
         }
         .price {
-            color: #ff85c0;
-            font-weight: bold;
-            font-size: 18px;
+            font-size: 24px;
+            color: #ed1c24;
+            font-weight: 900;
+            font-style: italic;
         }
         .buy-btn {
             display: block;
-            margin-top: 10px;
-            padding: 8px;
-            background-color: #81d4fa;
-            color: white;
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
             text-decoration: none;
-            border-radius: 50px;
-            font-size: 14px;
+            font-weight: 900;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); /* 台形ボタン */
+        }
+        .buy-btn:hover {
+            background-color: #ed1c24;
         }
     </style>
 </head>
@@ -91,34 +116,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <header>
-    <div class="logo">♡ Miu's Kawaii Shop ♡</div>
+    <div class="logo">Miu's Hero Archives</div>
 </header>
 
 <div class="container">
     <div class="item-card">
-        <div class="item-image">🧸</div>
+        <div class="item-image">🔥</div>
         <div class="item-info">
-            <div>ふわふわぬいぐるみ</div>
-            <div class="price">¥1,200</div>
-            <a href="#" class="buy-btn">詳細をみる</a>
+            <div class="item-name">灼熱の拳</div>
+            <div class="price">MAX POWER</div>
+            <a href="#" class="buy-btn">入手する</a>
         </div>
     </div>
 
     <div class="item-card">
-        <div class="item-image">🎀</div>
+        <div class="item-image">⚡</div>
         <div class="item-info">
-            <div>キラキラリボン</div>
-            <div class="price">¥500</div>
-            <a href="#" class="buy-btn">詳細をみる</a>
-        </div>
-    </div>
-
-    <div class="item-card">
-        <div class="item-image">🌟</div>
-        <div class="item-info">
-            <div>星のステッカー</div>
-            <div class="price">¥300</div>
-            <a href="#" class="buy-btn">詳細をみる</a>
+            <div class="item-name">迅雷の剣</div>
+            <div class="price">SPEED STAR</div>
+            <a href="#" class="buy-btn">入手する</a>
         </div>
     </div>
 </div>
